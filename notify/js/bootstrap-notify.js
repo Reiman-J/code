@@ -14,8 +14,18 @@
 	    notify = new Object();
 	    root.notify = notify;
 
-	    notify.show =  function (){
+	    notify.defaults ={
+	    	container:'body',
+	    	interval:3000,
+	    	icon:'info'
+	    };
 
+	    notify.show =  function (params){
+	    	var options = {},icon = null;
+	    	_.extend(options,params);
+
+	    	this.modal = new messgaeBody();
+	    	
 	    }
 
 	    function messgaeBody (){
